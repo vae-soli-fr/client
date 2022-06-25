@@ -24,5 +24,5 @@ FunctionEnd
 
 Section "Lineage II High Five"
   SetOutPath $INSTDIR
-  Nsis7z::ExtractWithDetails "$EXEDIR\data.001" "Installing package %s..."
+  Nsis7z::ExtractWithDetails "$EXEDIR\data.001" "Installing Lineage II: Freya (High Five) %s..."
 SectionEnd

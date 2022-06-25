@@ -1,12 +1,12 @@
-!define NAME "Vae Soli Patch"
+!define TYPE "Patch"
 !define VERSION "1.0.0"
 
-Name "${NAME}"
+Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
 OutFile "Patch.exe"
 InstallDir "$PROGRAMFILES32\Lineage II"
 XPStyle on
-BrandingText "${NAME} v${VERSION}"
+BrandingText "${TYPE} v${VERSION}"
 LicenseData "about.txt"
 ShowInstDetails hide
 

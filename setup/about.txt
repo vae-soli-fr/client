@@ -1,0 +1,5 @@
+Ce programme fourni par Vae Soli vous permer d'installer le client High Five officiel distribué par NCsoft, sans aucune modification.
+
+Pour être compatible avec notre serveur vous DEVEZ télécharger et installer le programme Patch.exe !
+
+Vous POUVEZ ensuite télécharger et installer le programme Update.exe pour utiliser nos dernières modifications client.

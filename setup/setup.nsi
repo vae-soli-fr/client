@@ -15,14 +15,14 @@ Page directory
 Page instfiles
 
 Function .onInit
-  IfFileExists $EXEDIR/data.001 0 +3
-  IfFileExists $EXEDIR/data.002 0 +2
-  IfFileExists $EXEDIR/data.003 +3 0
+  IfFileExists $EXEDIR\data.001 0 +3
+  IfFileExists $EXEDIR\data.002 0 +2
+  IfFileExists $EXEDIR\data.003 +3 0
   MessageBox MB_OK|MB_ICONSTOP "Une ou plusieurs archives sont manquantes."
   Abort "Installation impossible"
 FunctionEnd
 
 Section "Lineage II High Five"
   SetOutPath $INSTDIR
-  Nsis7z::ExtractWithDetails "$EXEDIR/data.001" "Installing package %s..."
+  Nsis7z::ExtractWithDetails "$EXEDIR\data.001" "Installing package %s..."
 SectionEnd

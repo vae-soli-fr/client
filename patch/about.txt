@@ -1,0 +1,3 @@
+Vous DEVEZ avoir déjà installé le programme Setup.exe avant de lancer ce programme.
+
+Après cette installation vous POUVEZ télécharger et installer le programme Update.exe pour utiliser nos dernières modifications client.

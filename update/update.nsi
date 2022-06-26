@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.0.0"
-!define PETNAME "Amazing Avocet"
+!define VERSION "1.1.0"
+!define PETNAME "Blazing Butterfly"
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
@@ -24,6 +24,16 @@ Section "Grand Crusade Lobby"
   File system\logongrp.dat
   SetOutPath $INSTDIR\textures
   File textures\Clasi_T2.utx
+SectionEnd
+
+Section "Giran Renew"
+  SetOutPath $INSTDIR\maps
+  File maps\22_22.unr
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\GrandCrusadeGiranDam.usx
+  File staticmeshes\GrandCrusadeTent.usx
+  SetOutPath $INSTDIR\textures
+  File textures\New_Speaking_V_T.utx
 SectionEnd
 
 Section "Version"

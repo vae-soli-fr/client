@@ -1,5 +1,6 @@
 !define TYPE "Patch"
 !define VERSION "1.0.0"
+!define SERVER "https://client.vae-soli.fr"
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
@@ -12,9 +13,12 @@ ShowInstDetails hide
 
 Page license
 Page directory
+Page components
 Page instfiles
 
-Section "Vae Soli"
+Section "Lineage II Patch"
+  SectionIn RO
+
   SetOutPath $INSTDIR
   Delete lineage2.ico
   Delete LineageII.exe
@@ -30,4 +34,13 @@ Section "Vae Soli"
   Delete Obscene-e.dat ; chat filter
 
   CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\system\L2.exe" "" "$INSTDIR\system\l2.ico" 0
+SectionEnd
+
+Section "Download and install last Update"
+  DetailPrint "Downloading last Update"
+  inetc::get "${SERVER}/Update.exe" "$EXEDIR\Update.exe" /END
+  Pop $0
+  StrCmp $0 "OK" +2 0
+  Abort "Le téléchargement a échoué"
+  ExecWait "$EXEDIR\Update.exe"
 SectionEnd

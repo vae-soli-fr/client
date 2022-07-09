@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.1.0"
-!define PETNAME "Blazing Butterfly"
+!define VERSION "1.2.0"
+!define PETNAME "Cheeky Caracal"
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
@@ -39,6 +39,11 @@ Section "Giran Renew"
   File staticmeshes\GrandCrusadeTent.usx
   SetOutPath $INSTDIR\textures
   File textures\New_Speaking_V_T.utx
+SectionEnd
+
+Section "Gludin Port"
+  SetOutPath $INSTDIR\maps
+  File maps\17_22.unr
 SectionEnd
 
 Section "Version"

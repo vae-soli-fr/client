@@ -16,6 +16,11 @@ Page directory
 Page components
 Page instfiles
 
+Function .onVerifyInstDir
+  IfFileExists $INSTDIR\system\l2.ini +2 0
+  Abort
+FunctionEnd
+
 Section "Lineage II Patch"
   SectionIn RO
 

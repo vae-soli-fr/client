@@ -15,6 +15,11 @@ Page license
 Page directory
 Page instfiles
 
+Function .onVerifyInstDir
+  IfFileExists $INSTDIR\system\l2.ini +2 0
+  Abort
+FunctionEnd
+
 Section "Grand Crusade Lobby"
   SetOutPath $INSTDIR\maps
   File maps\Lobby01.unr

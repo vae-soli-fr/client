@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.2.0"
-!define PETNAME "Cheeky Caracal"
+!define VERSION "1.3.0"
+!define PETNAME "Daring Drake"
 
 SetCompressor /SOLID lzma
 
@@ -51,6 +51,19 @@ SectionEnd
 Section "Gludin Port"
   SetOutPath $INSTDIR\maps
   File maps\17_22.unr
+SectionEnd
+
+Section "Execution Grounds from Classic"
+  SetOutPath $INSTDIR\animations
+  File animations\EG_A.ukx
+  SetOutPath $INSTDIR\maps
+  File maps\21_22.unr
+  SetOutPath $INSTDIR\sounds
+  File sounds\EG_SND.uax
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\EG_S4.usx
+  SetOutPath $INSTDIR\textures
+  File textures\EG_T4.utx
 SectionEnd
 
 Section "Version"

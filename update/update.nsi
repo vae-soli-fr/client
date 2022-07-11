@@ -2,6 +2,8 @@
 !define VERSION "1.2.0"
 !define PETNAME "Cheeky Caracal"
 
+SetCompressor /SOLID lzma
+
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
 OutFile "Update.exe"

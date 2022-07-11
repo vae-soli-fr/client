@@ -22,6 +22,11 @@ Function .onVerifyInstDir
   Abort
 FunctionEnd
 
+Function .onInstSuccess
+  MessageBox MB_YESNO|MB_ICONQUESTION "Would you like to read the changelog online?" IDYES 0 IDNO +2
+  ExecShell "open" "https://github.com/vae-soli-fr/client/blob/master/update/CHANGELOG.md"
+FunctionEnd
+
 Section "Grand Crusade Lobby"
   SetOutPath $INSTDIR\maps
   File maps\Lobby01.unr

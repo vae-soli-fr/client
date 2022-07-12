@@ -3,6 +3,7 @@
 !define PETNAME "Daring Drake"
 
 SetCompressor /SOLID lzma
+RequestExecutionLevel user
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"

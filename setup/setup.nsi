@@ -3,7 +3,7 @@
 !define SERVER "https://client.vae-soli.fr"
 
 SetCompressor /SOLID lzma
-RequestExecutionLevel user
+RequestExecutionLevel admin ; required
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"

@@ -3,7 +3,7 @@
 !define SERVER "https://client.vae-soli.fr"
 
 SetCompressor /SOLID lzma
-RequestExecutionLevel user
+RequestExecutionLevel admin ; required
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
@@ -24,10 +24,16 @@ Function .onVerifyInstDir
   Abort
 FunctionEnd
 
+Function .onInstSuccess
+  WriteINIStr $INSTDIR\launcher.ini Client ${TYPE} ${VERSION}
+  SetFileAttributes $INSTDIR\launcher.ini HIDDEN
+FunctionEnd
+
 Section "Lineage II Patch"
   SectionIn RO
 
   SetOutPath $INSTDIR
+  File Launcher.exe
   Delete lineage2.ico
   Delete LineageII.exe
   Delete Lineage2.new
@@ -38,10 +44,9 @@ Section "Lineage II Patch"
 
   SetOutPath $INSTDIR\system
   File /a /r "system\" ; patched system
-  File /oname=l2.ico lineage2.ico
   Delete Obscene-e.dat ; chat filter
 
-  CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\system\L2.exe" "" "$INSTDIR\system\l2.ico" 0
+  CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
 SectionEnd
 
 Section "Download and install last Update"

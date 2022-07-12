@@ -3,7 +3,7 @@
 !define PETNAME "Daring Drake"
 
 SetCompressor /SOLID lzma
-RequestExecutionLevel user
+RequestExecutionLevel admin ; required
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
@@ -24,6 +24,8 @@ Function .onVerifyInstDir
 FunctionEnd
 
 Function .onInstSuccess
+  WriteINIStr $INSTDIR\launcher.ini Client ${TYPE} ${VERSION}
+  SetFileAttributes $INSTDIR\launcher.ini HIDDEN
   MessageBox MB_YESNO|MB_ICONQUESTION "Would you like to read the changelog online?" IDYES 0 IDNO +2
   ExecShell "open" "https://github.com/vae-soli-fr/client/blob/master/update/CHANGELOG.md"
 FunctionEnd

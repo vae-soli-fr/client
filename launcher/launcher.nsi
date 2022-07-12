@@ -4,11 +4,11 @@
 !define SF_SELECTED 1
 
 SetCompressor /SOLID lzma
-RequestExecutionLevel admin ; requis pour lancer L2
+RequestExecutionLevel admin ; required
 
 Name "Vae Soli ${TYPE}"
 Icon "lineage2.ico"
-OutFile "Launcher.exe"
+OutFile "..\Patch\Launcher.exe"
 XPStyle on
 BrandingText "${TYPE} v${VERSION}"
 ShowInstDetails nevershow
@@ -58,8 +58,8 @@ SectionEnd
 
 Function "check"
   IfFileExists $TEMP\vaesoli\latest.ini 0 skip
-  ReadINIStr $latest $TEMP\vaesoli\latest.ini vaesoli update
-  ReadINIStr $running $EXEDIR\launcher.ini vaesoli update
+  ReadINIStr $latest $TEMP\vaesoli\latest.ini Client Update
+  ReadINIStr $running $EXEDIR\launcher.ini Client Update
   StrCmp $latest $running +3 0
   SectionSetFlags ${update} ${SF_SELECTED}
   Goto skip

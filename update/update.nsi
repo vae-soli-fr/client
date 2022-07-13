@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.3.0"
-!define PETNAME "Daring Drake"
+!define VERSION "1.4.0"
+!define PETNAME "Eager Eagle"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -67,6 +67,11 @@ Section "Execution Grounds from Classic"
   File staticmeshes\EG_S4.usx
   SetOutPath $INSTDIR\textures
   File textures\EG_T4.utx
+SectionEnd
+
+Section "Cerulys"
+  SetOutPath $INSTDIR\maps
+  File maps\24_22.unr
 SectionEnd
 
 Section "Version"

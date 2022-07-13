@@ -25,8 +25,8 @@ Function .onVerifyInstDir
 FunctionEnd
 
 Function .onInstSuccess
-  WriteINIStr $INSTDIR\launcher.ini Client ${TYPE} ${VERSION}
-  SetFileAttributes $INSTDIR\launcher.ini HIDDEN
+  WriteINIStr $INSTDIR\version.ini Client ${TYPE} ${VERSION}
+  SetFileAttributes $INSTDIR\version.ini HIDDEN
 FunctionEnd
 
 Section "Lineage II Patch"

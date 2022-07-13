@@ -38,6 +38,7 @@ Function .OnGUIInit
 FunctionEnd
 
 Function .OnGUIEnd
+  WriteINIStr $INSTDIR\version.ini Client ${TYPE} ${VERSION}
   RMDir /r $TEMP\vaesoli
 FunctionEnd
 
@@ -59,7 +60,7 @@ SectionEnd
 Function "check"
   IfFileExists $TEMP\vaesoli\latest.ini 0 skip
   ReadINIStr $latest $TEMP\vaesoli\latest.ini Client Update
-  ReadINIStr $running $EXEDIR\launcher.ini Client Update
+  ReadINIStr $running $EXEDIR\version.ini Client Update
   StrCmp $latest $running +3 0
   SectionSetFlags ${update} ${SF_SELECTED}
   Goto skip

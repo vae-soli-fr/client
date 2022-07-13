@@ -27,6 +27,11 @@ Function .onInit
   Abort "Installation impossible"
 FunctionEnd
 
+Function .onInstSuccess
+  WriteINIStr $INSTDIR\version.ini Client ${TYPE} ${VERSION}
+  SetFileAttributes $INSTDIR\version.ini HIDDEN
+FunctionEnd
+
 Section "Lineage II Retail client"
   SectionIn RO
   AddSize 11558609 ; kB

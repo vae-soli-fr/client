@@ -1,5 +1,5 @@
 !define TYPE "Retail"
-!define VERSION "1.0.1"
+!define VERSION "1.1.0"
 !define SERVER "https://client.vae-soli.fr"
 
 SetCompressor /SOLID lzma

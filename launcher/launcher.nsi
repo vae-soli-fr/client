@@ -34,7 +34,7 @@ Function .OnGUIInit
   inetc::get "${SERVER}/latest.ini" "$TEMP\vaesoli\latest.ini" /END
   Pop $0
   StrCmp $0 "OK" +2 0
-  MessageBox MB_OK|MB_ICONINFORMATION "Impossible de récupérer la dernière version"
+  MessageBox MB_OK|MB_ICONINFORMATION|MB_TOPMOST "Impossible de récupérer la dernière version"
 FunctionEnd
 
 Function .OnGUIEnd
@@ -58,12 +58,15 @@ Section /o "run" run
 SectionEnd
 
 Function "check"
-  IfFileExists $TEMP\vaesoli\latest.ini 0 skip
+  HideWindow
+  IfFileExists $TEMP\vaesoli\latest.ini 0 pass ; when download fail
   ReadINIStr $latest $TEMP\vaesoli\latest.ini Client Update
   ReadINIStr $running $EXEDIR\version.ini Client Update
-  StrCmp $latest $running +3 0
+  StrCmp $latest $running pass 0
+  MessageBox MB_YESNO|MB_ICONQUESTION|MB_TOPMOST "Un nouvel Update v$latest est disponible :$\r$\nsouhaitez-vous le télécharger ?" IDYES 0 IDNO pass
   SectionSetFlags ${update} ${SF_SELECTED}
   Goto skip
+  pass:
   SectionSetFlags ${run} ${SF_SELECTED}
   skip:
 FunctionEnd

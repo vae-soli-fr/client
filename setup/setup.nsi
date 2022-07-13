@@ -23,7 +23,7 @@ Function .onInit
   IfFileExists $EXEDIR\data.001 0 +3
   IfFileExists $EXEDIR\data.002 0 +2
   IfFileExists $EXEDIR\data.003 +3 0
-  MessageBox MB_OK|MB_ICONSTOP "Une ou plusieurs archives sont manquantes."
+  MessageBox MB_OK|MB_ICONSTOP|MB_TOPMOST "Une ou plusieurs archives sont manquantes."
   Abort "Installation impossible"
 FunctionEnd
 

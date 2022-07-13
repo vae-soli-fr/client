@@ -38,7 +38,7 @@ Function .OnGUIInit
 FunctionEnd
 
 Function .OnGUIEnd
-  WriteINIStr $INSTDIR\version.ini Client ${TYPE} ${VERSION}
+  WriteINIStr $EXEDIR\version.ini Client ${TYPE} ${VERSION}
   RMDir /r $TEMP\vaesoli
 FunctionEnd
 

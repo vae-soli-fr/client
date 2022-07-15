@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] Eager Eagle - 2022-07-15
+
+### Added
+
+- Version management
 
 ## [1.3.0] Daring Drake - 2022-07-11
 
@@ -37,7 +42,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Grand Crusade Lobby
 
-[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.3.0...HEAD
+[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.4.0...HEAD
+[1.4.0]: https://github.com/vae-soli-fr/client/compare/update-v1.3.0...update-v1.4.0
 [1.3.0]: https://github.com/vae-soli-fr/client/compare/update-v1.2.0...update-v1.3.0
 [1.2.0]: https://github.com/vae-soli-fr/client/compare/update-v1.1.0...update-v1.2.0
 [1.1.0]: https://github.com/vae-soli-fr/client/compare/update-v1.0.0...update-v1.1.0

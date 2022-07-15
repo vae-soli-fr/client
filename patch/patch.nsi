@@ -1,5 +1,5 @@
 !define TYPE "Patch"
-!define VERSION "1.1.0"
+!define VERSION "1.1.1"
 !define SERVER "https://client.vae-soli.fr"
 
 SetCompressor /SOLID lzma
@@ -45,6 +45,10 @@ Section "Lineage II Patch"
   SetOutPath $INSTDIR\system
   File /a /r "system\" ; patched system
   Delete Obscene-e.dat ; chat filter
+
+  ; chat options
+  WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex1 5
+  WriteINIStr $INSTDIR\system\chatfilter.ini global npc False
 
   CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
 SectionEnd

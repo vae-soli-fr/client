@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.4.0"
-!define PETNAME "Eager Eagle"
+!define VERSION "1.5.0"
+!define PETNAME "Feisty Fish"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -72,6 +72,26 @@ SectionEnd
 Section "Cerulys"
   SetOutPath $INSTDIR\maps
   File maps\24_22.unr
+SectionEnd
+
+Section "Gludio from Classic"
+  SetOutPath $INSTDIR\maps
+  File maps\19_21.unr
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\gl_cv_s.usx
+  File staticmeshes\Gludio_Rewindmill_S.usx
+  File staticmeshes\gludio_tree_S.usx
+  SetOutPath $INSTDIR\textures
+  File textures\gl_cv_t.utx
+  File textures\gludio_rewindmill_t.utx
+  File textures\gludio_tree_t.utx
+  File textures\L2DecoLayer.utx
+  File textures\magmell_orbis_t.utx
+  File textures\t_19_21.utx
+  File textures\t_gludio.utx
+  File textures\t_oren.utx
+  File textures\t_sland.utx
+  File textures\T_texture.utx
 SectionEnd
 
 Section "Version"

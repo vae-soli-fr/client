@@ -40,7 +40,7 @@ Section "Lineage II Retail client"
   Nsis7z::ExtractWithDetails "$EXEDIR\data.001" "Installing Lineage II: Freya (High Five) %s..."
 SectionEnd
 
-Section "Download and install last Patch"
+Section /o "Download and install last Patch"
   DetailPrint "Downloading last Patch"
   inetc::get "${SERVER}/Patch.exe" "$EXEDIR\Patch.exe" /END
   Pop $0

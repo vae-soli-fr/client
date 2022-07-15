@@ -53,7 +53,7 @@ Section "Lineage II Patch"
   CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
 SectionEnd
 
-Section "Download and install last Update"
+Section /o "Download and install last Update"
   DetailPrint "Downloading last Update"
   inetc::get "${SERVER}/Update.exe" "$EXEDIR\Update.exe" /END
   Pop $0

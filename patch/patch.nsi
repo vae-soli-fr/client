@@ -1,5 +1,5 @@
 !define TYPE "Patch"
-!define VERSION "1.1.1"
+!define VERSION "1.1.2"
 !define SERVER "https://client.vae-soli.fr"
 
 SetCompressor /SOLID lzma

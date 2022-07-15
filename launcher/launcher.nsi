@@ -1,5 +1,5 @@
 !define TYPE "Launcher"
-!define VERSION "1.0.0"
+!define VERSION "1.0.1"
 !define SERVER "https://client.vae-soli.fr"
 !define SF_SELECTED 1
 

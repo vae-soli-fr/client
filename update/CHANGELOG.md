@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Version management
+- Cerulys
 
 ## [1.3.0] Daring Drake - 2022-07-11
 

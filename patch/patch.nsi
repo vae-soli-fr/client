@@ -47,8 +47,13 @@ Section "Lineage II Patch"
   Delete Obscene-e.dat ; chat filter
 
   ; chat options
+  WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex0 0
   WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex1 5
+  WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex2 2
+  WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex3 3
+  WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex4 4
   WriteINIStr $INSTDIR\system\chatfilter.ini global npc False
+  WriteINIStr $INSTDIR\system\chatfilter.ini pledge_tab hero True
 
   CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
 SectionEnd

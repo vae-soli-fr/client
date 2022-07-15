@@ -12,14 +12,19 @@ OutFile "..\Patch\Launcher.exe"
 XPStyle on
 BrandingText "${TYPE} v${VERSION}"
 ShowInstDetails nevershow
-AutoCloseWindow true
 
+MiscButtonText "Retour" "Jouer" "Quitter" "Fermer"
+InstallButtonText "Jouer"
 SubCaption 3 " : mise à jour"
 Caption "Vae Soli"
+WindowIcon off
+SetFont "Tahoma" 13
+AutoCloseWindow true
 
 Var latest
 Var running
 
+Page custom web
 Page custom check
 Page instfiles
 
@@ -56,6 +61,12 @@ Section /o "run" run
   SetOutPath $EXEDIR\system
   Exec l2.exe
 SectionEnd
+
+Function "web"
+  nsWeb::IsInet 1
+  StrCmp $1 1 0 +2
+  nsWeb::ShowWebInPage "${SERVER}/news"
+FunctionEnd
 
 Function "check"
   HideWindow

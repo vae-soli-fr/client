@@ -64,5 +64,5 @@ Section /o "Download and install last Update"
   Pop $0
   StrCmp $0 "OK" +2 0
   Abort "Le téléchargement a échoué"
-  ExecWait "$EXEDIR\Update.exe"
+  ExecWait '"$EXEDIR\Update.exe" /D=$INSTDIR'
 SectionEnd

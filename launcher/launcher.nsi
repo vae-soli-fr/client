@@ -53,7 +53,7 @@ Section /o "update" update
   Pop $0
   StrCmp $0 "OK" +2 0
   Abort "Le téléchargement a échoué"
-  Exec "$TEMP\vaesoli\Update.exe"
+  Exec '"$TEMP\vaesoli\Update.exe" /D=$EXEDIR'
 SectionEnd
 
 Section /o "run" run

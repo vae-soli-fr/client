@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2022-07-16
+
+### Added
+
+- Pass install directory
+- Download patch option disabled by default
+
 ## [1.1.0] - 2022-07-15
 
 ### Added
@@ -25,7 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Retail client installer
 
-[unreleased]: https://github.com/vae-soli-fr/client/compare/setup-v1.1.0...HEAD
+[unreleased]: https://github.com/vae-soli-fr/client/compare/setup-v1.1.1...HEAD
+[1.1.1]: https://github.com/vae-soli-fr/client/compare/setup-v1.1.0...setup-v1.1.1
 [1.1.0]: https://github.com/vae-soli-fr/client/compare/setup-v1.0.1...setup-v1.1.0
 [1.0.1]: https://github.com/vae-soli-fr/client/compare/setup-v1.0.0...setup-v1.0.1
 [1.0.0]: https://github.com/vae-soli-fr/client/releases/tag/setup-v1.0.0

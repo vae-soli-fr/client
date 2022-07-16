@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2022-07-16
+
+### Added
+
+- Version management
+- Include launcher
+- Keep user tabs settings
+- Pass install directory
+- Download setup option disabled by default
+
 ## [1.1.0] - 2022-07-15
 
 ### Added

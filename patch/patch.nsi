@@ -52,7 +52,7 @@ Section "Lineage II Patch"
   WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex2 2
   WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex3 3
   WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex4 4
-  WriteINIStr $INSTDIR\system\chatfilter.ini global npc False
+  WriteINIStr $INSTDIR\system\chatfilter.ini global npc True
   WriteINIStr $INSTDIR\system\chatfilter.ini pledge_tab hero True
 
   CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0

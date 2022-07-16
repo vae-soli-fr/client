@@ -1,5 +1,5 @@
 !define TYPE "Launcher"
-!define VERSION "1.0.1"
+!define VERSION "1.1.0"
 !define SERVER "https://client.vae-soli.fr"
 !define SF_SELECTED 1
 
@@ -21,8 +21,10 @@ WindowIcon off
 SetFont "Tahoma" 13
 AutoCloseWindow true
 
-Var latest
-Var running
+Var latestPatch
+Var runningPatch
+Var latestUpdate
+Var runningUpdate
 
 Page custom web
 Page custom check
@@ -47,13 +49,22 @@ Function .OnGUIEnd
   RMDir /r $TEMP\vaesoli
 FunctionEnd
 
+Section /o "patch" patch
+  DetailPrint "Downloading last Patch"
+  inetc::get "${SERVER}/Patch.exe" "$TEMP\vaesoli\Patch.exe" /END
+  Pop $0
+  StrCmp $0 "OK" +2 0
+  Abort "Le téléchargement a échoué"
+  Exec '"$TEMP\vaesoli\Patch.exe" /D=$EXEDIR'
+SectionEnd
+
 Section /o "update" update
   DetailPrint "Downloading last Update"
   inetc::get "${SERVER}/Update.exe" "$TEMP\vaesoli\Update.exe" /END
   Pop $0
   StrCmp $0 "OK" +2 0
   Abort "Le téléchargement a échoué"
-  Exec '"$TEMP\vaesoli\Update.exe" /D=$EXEDIR'
+  ExecWait '"$TEMP\vaesoli\Update.exe" /D=$EXEDIR'
 SectionEnd
 
 Section /o "run" run
@@ -71,12 +82,24 @@ FunctionEnd
 Function "check"
   HideWindow
   IfFileExists $TEMP\vaesoli\latest.ini 0 pass ; when download fail
-  ReadINIStr $latest $TEMP\vaesoli\latest.ini Client Update
-  ReadINIStr $running $EXEDIR\version.ini Client Update
-  StrCmp $latest $running pass 0
-  MessageBox MB_YESNO|MB_ICONQUESTION|MB_TOPMOST "Un nouvel Update v$latest est disponible :$\r$\nsouhaitez-vous le télécharger ?" IDYES 0 IDNO pass
-  SectionSetFlags ${update} ${SF_SELECTED}
+
+  ; select patch
+  ReadINIStr $latestPatch $TEMP\vaesoli\latest.ini Client Patch
+  ReadINIStr $runningPatch $EXEDIR\version.ini Client Patch
+  StrCmp $latestPatch $runningPatch next 0
+  MessageBox MB_YESNO|MB_ICONQUESTION|MB_TOPMOST "Un nouveau Patch v$latestPatch est disponible :$\r$\nsouhaitez-vous le télécharger ?" IDYES 0 IDNO next
+  SectionSetFlags ${patch} ${SF_SELECTED}
   Goto skip
+
+  ; select update
+  next:
+  ReadINIStr $latestUpdate $TEMP\vaesoli\latest.ini Client Update
+  ReadINIStr $runningUpdate $EXEDIR\version.ini Client Update
+  StrCmp $latestUpdate $runningUpdate pass 0
+  MessageBox MB_YESNO|MB_ICONQUESTION|MB_TOPMOST "Un nouvel Update v$latestUpdate est disponible :$\r$\nsouhaitez-vous le télécharger ?" IDYES 0 IDNO pass
+  SectionSetFlags ${update} ${SF_SELECTED}
+
+  ; select L2
   pass:
   SectionSetFlags ${run} ${SF_SELECTED}
   skip:

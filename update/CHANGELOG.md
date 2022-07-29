@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] Goofy Goose - 2022-07-29
+
+### Added
+
+- Windmill Hill
+
+### Fixed
+
+- Grand Crusade Lobby
+
 ## [1.5.0] Feisty Fish - 2022-07-16
 
 ### Added
@@ -49,7 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Grand Crusade Lobby
 
-[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.5.0...HEAD
+[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.6.0...HEAD
+[1.6.0]: https://github.com/vae-soli-fr/client/compare/update-v1.5.0...update-v1.6.0
 [1.5.0]: https://github.com/vae-soli-fr/client/compare/update-v1.4.0...update-v1.5.0
 [1.4.0]: https://github.com/vae-soli-fr/client/compare/update-v1.3.0...update-v1.4.0
 [1.3.0]: https://github.com/vae-soli-fr/client/compare/update-v1.2.0...update-v1.3.0

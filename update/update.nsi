@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.5.0"
-!define PETNAME "Feisty Fish"
+!define VERSION "1.6.0"
+!define PETNAME "Goofy Goose"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -92,6 +92,17 @@ Section "Gludio from Classic"
   File textures\t_oren.utx
   File textures\t_sland.utx
   File textures\T_texture.utx
+SectionEnd
+
+Section "Windmill Hill"
+  SetOutPath $INSTDIR\maps
+  File maps\17_23.unr
+  SetOutPath $INSTDIR\sounds
+  File sounds\Windmill_SND.uax
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\Windmill_S6.usx
+  SetOutPath $INSTDIR\textures
+  File textures\Windmill_T6.utx
 SectionEnd
 
 Section "Version"

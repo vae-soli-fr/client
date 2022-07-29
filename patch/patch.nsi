@@ -1,6 +1,10 @@
 !define TYPE "Patch"
-!define VERSION "1.2.0"
+!define VERSION "1.3.0"
 !define SERVER "https://client.vae-soli.fr"
+
+!include FontName.nsh
+!include FontReg.nsh
+!include WinMessages.nsh
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -54,6 +58,11 @@ Section "Lineage II Patch"
   WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex4 4
   WriteINIStr $INSTDIR\system\chatfilter.ini global npc True
   WriteINIStr $INSTDIR\system\chatfilter.ini pledge_tab hero True
+
+  ; font
+  StrCpy $FONT_DIR $FONTS
+  !insertmacro InstallTTFFont "PTSans.ttf"
+  SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
 
   CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
 SectionEnd

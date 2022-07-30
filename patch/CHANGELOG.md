@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2022-07-30
+
+### Added
+
+- PT Sans as font
+- Pastel colors
+
 ## [1.2.0] - 2022-07-16
 
 ### Added
@@ -39,7 +46,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Legacy sky level
 - Remove chat filter
 
-[unreleased]: https://github.com/vae-soli-fr/client/compare/patch-v1.1.0...HEAD
+[unreleased]: https://github.com/vae-soli-fr/client/compare/patch-v1.3.0...HEAD
+[1.3.0]: https://github.com/vae-soli-fr/client/compare/patch-v1.2.0...patch-v1.3.0
+[1.2.0]: https://github.com/vae-soli-fr/client/compare/patch-v1.1.0...patch-v1.2.0
 [1.1.0]: https://github.com/vae-soli-fr/client/compare/patch-v1.0.1...patch-v1.1.0
 [1.0.1]: https://github.com/vae-soli-fr/client/compare/patch-v1.0.0...patch-v1.0.1
 [1.0.0]: https://github.com/vae-soli-fr/client/releases/tag/patch-v1.0.0

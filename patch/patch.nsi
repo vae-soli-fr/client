@@ -31,6 +31,8 @@ FunctionEnd
 Function .onInstSuccess
   WriteINIStr $INSTDIR\version.ini Client ${TYPE} ${VERSION}
   SetFileAttributes $INSTDIR\version.ini HIDDEN
+  MessageBox MB_YESNO|MB_ICONQUESTION "Would you like to read the changelog online?" IDYES 0 IDNO +2
+  ExecShell "open" "https://github.com/vae-soli-fr/client/blob/master/patch/CHANGELOG.md"
 FunctionEnd
 
 Section "Lineage II Patch"

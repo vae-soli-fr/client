@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PT Sans as font
 - Pastel colors
 
+### Fixed
+
+- NPC Talk option
+
 ## [1.2.0] - 2022-07-16
 
 ### Added

@@ -52,6 +52,10 @@ Section "Lineage II Patch"
   File /a /r "system\" ; patched system
   Delete Obscene-e.dat ; chat filter
 
+  CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
+SectionEnd
+
+Section "Improved interface"
   ; chat options
   WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex0 0
   WriteINIStr $INSTDIR\system\chatfilter.ini global TabIndex1 5
@@ -61,12 +65,20 @@ Section "Lineage II Patch"
   WriteINIStr $INSTDIR\system\chatfilter.ini global npc True
   WriteINIStr $INSTDIR\system\chatfilter.ini pledge_tab hero True
 
+  ; messages
+  SetOutPath $INSTDIR\system
+  File systemmsg-e.dat
+
+  ; colors
+  SetOutPath $INSTDIR\system
+  File Interface.u
+
   ; font
+  SetOutPath $INSTDIR\system
+  File Interface.xdat
   StrCpy $FONT_DIR $FONTS
   !insertmacro InstallTTFFont "PTSans.ttf"
   SendMessage ${HWND_BROADCAST} ${WM_FONTCHANGE} 0 0 /TIMEOUT=5000
-
-  CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
 SectionEnd
 
 Section /o "Download and install last Update"

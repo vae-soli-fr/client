@@ -18,6 +18,8 @@ BrandingText "${TYPE} v${VERSION}"
 LicenseData "about.txt"
 ShowInstDetails hide
 
+Var runningUpdate
+
 Page license
 Page directory
 Page components
@@ -51,6 +53,9 @@ Section "Lineage II Patch"
   SetOutPath $INSTDIR\system
   File /a /r "system\" ; patched system
   Delete Obscene-e.dat ; chat filter
+  ReadINIStr $runningUpdate $INSTDIR\version.ini Client Update
+  StrCmp $runningUpdate "" +2 0 ; undefined
+  File ..\update\system\logongrp.dat
 
   CreateShortCut "$DESKTOP\Vae Soli.lnk" "$INSTDIR\Launcher.exe" "" "$INSTDIR\Launcher.exe" 0
 SectionEnd

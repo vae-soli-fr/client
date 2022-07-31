@@ -1,5 +1,5 @@
 !define TYPE "Patch"
-!define VERSION "1.3.0"
+!define VERSION "1.3.1"
 !define SERVER "https://client.vae-soli.fr"
 
 !include FontName.nsh

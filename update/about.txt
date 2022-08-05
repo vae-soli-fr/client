@@ -1,1 +1,3 @@
 Vous DEVEZ avoir déjà installé les programmes Setup.exe et Patch.exe avant de lancer ce programme.
+
+Ce programme installe des modifications réalisées par deMEV (MapsCrafter) et partagées gratuitement.

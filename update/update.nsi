@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.6.0"
-!define PETNAME "Goofy Goose"
+!define VERSION "1.7.0"
+!define PETNAME "Humble Hawk"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -103,6 +103,15 @@ Section "Windmill Hill"
   File staticmeshes\Windmill_S6.usx
   SetOutPath $INSTDIR\textures
   File textures\Windmill_T6.utx
+SectionEnd
+
+Section "Tower of Insolence from Classic"
+  SetOutPath $INSTDIR\maps
+  File maps\23_18.unr
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\TOI_Classic_S.usx
+  SetOutPath $INSTDIR\textures
+  File textures\TOI_Classic_T.utx
 SectionEnd
 
 Section "Version"

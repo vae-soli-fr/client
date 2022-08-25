@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.0] Immortal Ibis - 2022-08-25
+
+### Added
+
+- Hubris Dungeon
+
 ## [1.7.0] Humble Hawk - 2022-08-08
 
 ### Added
@@ -65,7 +71,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Grand Crusade Lobby
 
-[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.7.0...HEAD
+[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.8.0...HEAD
+[1.8.0]: https://github.com/vae-soli-fr/client/compare/update-v1.7.0...update-v1.8.0
 [1.7.0]: https://github.com/vae-soli-fr/client/compare/update-v1.6.0...update-v1.7.0
 [1.6.0]: https://github.com/vae-soli-fr/client/compare/update-v1.5.0...update-v1.6.0
 [1.5.0]: https://github.com/vae-soli-fr/client/compare/update-v1.4.0...update-v1.5.0

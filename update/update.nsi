@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.7.0"
-!define PETNAME "Humble Hawk"
+!define VERSION "1.8.0"
+!define PETNAME "Immortal Ibis"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -112,6 +112,17 @@ Section "Tower of Insolence from Classic"
   File staticmeshes\TOI_Classic_S.usx
   SetOutPath $INSTDIR\textures
   File textures\TOI_Classic_T.utx
+SectionEnd
+
+Section "Hubris Dungeon"
+  SetOutPath $INSTDIR\maps
+  File maps\15_18.unr
+  SetOutPath $INSTDIR\sounds
+  File sounds\Hubris_SND.uax
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\Hubris_S.usx
+  SetOutPath $INSTDIR\textures
+  File textures\Hubris_T.utx
 SectionEnd
 
 Section "Version"

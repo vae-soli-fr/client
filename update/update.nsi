@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.8.0"
-!define PETNAME "Immortal Ibis"
+!define VERSION "1.9.0"
+!define PETNAME "Jolly Junco"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -123,6 +123,17 @@ Section "Hubris Dungeon"
   File staticmeshes\Hubris_S.usx
   SetOutPath $INSTDIR\textures
   File textures\Hubris_T.utx
+SectionEnd
+
+Section "Astatine Fortress"
+  SetOutPath $INSTDIR\maps
+  File maps\18_18.unr
+  SetOutPath $INSTDIR\sounds
+  File sounds\Astatine_SND.uax
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\Astatine_S3.usx
+  SetOutPath $INSTDIR\textures
+  File textures\Astatine_T3.utx
 SectionEnd
 
 Section "Version"

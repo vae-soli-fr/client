@@ -1,5 +1,5 @@
 !define TYPE "Launcher"
-!define VERSION "1.1.0"
+!define VERSION "1.1.1"
 !define SERVER "https://client.vae-soli.fr"
 !define SF_SELECTED 1
 
@@ -41,7 +41,7 @@ Function .OnGUIInit
   inetc::get "${SERVER}/latest.ini" "$TEMP\vaesoli\latest.ini" /END
   Pop $0
   StrCmp $0 "OK" +2 0
-  MessageBox MB_OK|MB_ICONINFORMATION|MB_TOPMOST "Impossible de récupérer la dernière version"
+  MessageBox MB_OK|MB_ICONINFORMATION|MB_TOPMOST "Impossible de vérifier la dernière version"
 FunctionEnd
 
 Function .OnGUIEnd
@@ -74,9 +74,10 @@ Section /o "run" run
 SectionEnd
 
 Function "web"
-  nsWeb::IsInet 1
-  StrCmp $1 1 0 +2
-  nsWeb::ShowWebInPage "${SERVER}/news"
+  inetc::get "${SERVER}/news/index.html" "$TEMP\vaesoli\news.html" /END
+  Pop $0
+  StrCmp $0 "OK" 0 +2
+  nsWeb::ShowWebInPage "$TEMP\vaesoli\news.html"
 FunctionEnd
 
 Function "check"

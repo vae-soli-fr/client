@@ -1,5 +1,5 @@
 !define TYPE "Patch"
-!define VERSION "1.3.1"
+!define VERSION "1.3.2"
 !define SERVER "https://client.vae-soli.fr"
 
 !include FontName.nsh
@@ -72,7 +72,7 @@ Section "Improved interface"
 
   ; messages
   SetOutPath $INSTDIR\system
-  File systemmsg-e.dat
+  File SystemMsg-e.dat
 
   ; colors
   SetOutPath $INSTDIR\system

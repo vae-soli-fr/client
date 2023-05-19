@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.9.0"
-!define PETNAME "Jolly Junco"
+!define VERSION "1.10.0"
+!define PETNAME "Karmic Koala"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -134,6 +134,11 @@ Section "Astatine Fortress"
   File staticmeshes\Astatine_S3.usx
   SetOutPath $INSTDIR\textures
   File textures\Astatine_T3.utx
+SectionEnd
+
+Section "All transformations"
+  SetOutPath $INSTDIR\system
+  File system\transformdata.dat
 SectionEnd
 
 Section "Version"

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.11.0] Lazy Lobster - 2023-11-01
+
+### Added
+
+- Farm Zone
+
 ## [1.10.0] Karmic Koala - 2023-05-19
 
 ### Added
@@ -83,7 +89,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Grand Crusade Lobby
 
-[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.10.0...HEAD
+[unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.11.0...HEAD
+[1.11.0]: https://github.com/vae-soli-fr/client/compare/update-v1.10.0...update-v1.11.0
 [1.10.0]: https://github.com/vae-soli-fr/client/compare/update-v1.9.0...update-v1.10.0
 [1.9.0]: https://github.com/vae-soli-fr/client/compare/update-v1.8.0...update-v1.9.0
 [1.8.0]: https://github.com/vae-soli-fr/client/compare/update-v1.7.0...update-v1.8.0

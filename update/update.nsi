@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.10.0"
-!define PETNAME "Karmic Koala"
+!define VERSION "1.11.0"
+!define PETNAME "Lazy Lobster"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -139,6 +139,19 @@ SectionEnd
 Section "All transformations"
   SetOutPath $INSTDIR\system
   File system\transformdata.dat
+SectionEnd
+
+Section "Farm Zone"
+  SetOutPath $INSTDIR\maps
+  File maps\26_21.unr
+  SetOutPath $INSTDIR\sounds
+  File sounds\AmbSound.uax
+  File sounds\AmbSound3.uax
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\FarmZN.usx
+  SetOutPath $INSTDIR\textures
+  File textures\FarmT.utx
+  File textures\Fire_D.utx
 SectionEnd
 
 Section "Version"

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.12.0] Mystic Moose - 2026-02-28
+
+### Added
+
+- New Cemetery
+
 ## [1.11.0] Lazy Lobster - 2023-11-01
 
 ### Added
@@ -90,6 +96,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Grand Crusade Lobby
 
 [unreleased]: https://github.com/vae-soli-fr/client/compare/update-v1.11.0...HEAD
+[1.12.0]: https://github.com/vae-soli-fr/client/compare/update-v1.11.0...update-v1.12.0
 [1.11.0]: https://github.com/vae-soli-fr/client/compare/update-v1.10.0...update-v1.11.0
 [1.10.0]: https://github.com/vae-soli-fr/client/compare/update-v1.9.0...update-v1.10.0
 [1.9.0]: https://github.com/vae-soli-fr/client/compare/update-v1.8.0...update-v1.9.0

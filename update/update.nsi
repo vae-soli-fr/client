@@ -1,6 +1,6 @@
 !define TYPE "Update"
-!define VERSION "1.11.0"
-!define PETNAME "Lazy Lobster"
+!define VERSION "1.12.0"
+!define PETNAME "Mystic Moose"
 
 SetCompressor /SOLID lzma
 RequestExecutionLevel admin ; required
@@ -152,6 +152,19 @@ Section "Farm Zone"
   SetOutPath $INSTDIR\textures
   File textures\FarmT.utx
   File textures\Fire_D.utx
+SectionEnd
+
+Section "New Cemetery"
+  SetOutPath $INSTDIR\animations
+  File animations\Cem_A.ukx
+  SetOutPath $INSTDIR\maps
+  File maps\25_18.unr
+  SetOutPath $INSTDIR\sounds
+  File sounds\Cem_SND.uax
+  SetOutPath $INSTDIR\staticmeshes
+  File staticmeshes\Cem_S.usx
+  SetOutPath $INSTDIR\textures
+  File textures\Cem_T.utx
 SectionEnd
 
 Section "Version"
